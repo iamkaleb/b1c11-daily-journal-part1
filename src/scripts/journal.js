@@ -1,18 +1,15 @@
+import API from "./data.js"
+import DOM from "./entriesDOM.js"
 
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
 
-// JOURNAL ENTRIES ARRAY
+    Change the fake variable names below to what they should be
+    to get the data and display it.
+*/
 
-
-
-
-
-// const renderJournalEntries = (entries) => {
-//     for (const entries of journalEntries) {
-//         let journalComponent = ""
-//         journalComponent = makeJournalEntryComponent(entries)
-//         journalEntryContainer.innerHTML += journalComponent
-//     }    
-// }
-
-// RUNNING THE FUNCTION TO ADD JOURNAL ENTRIES TO DOM
-// renderJournalEntries(journalEntries)
+API.getJournalEntries()
+.then(entries => {
+    DOM.renderJournalEntries(entries)
+})
