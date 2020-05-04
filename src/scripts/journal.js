@@ -9,7 +9,19 @@ import DOM from "./entriesDOM.js"
     to get the data and display it.
 */
 
-API.getJournalEntries()
-.then(entries => {
-    DOM.renderJournalEntries(entries)
+document.getElementById("record-entry").addEventListener("click", function () {
+    fetch("http://localhost:8088/entries", {
+    method: "POST",
+    body: JSON.stringify(newJournalEntry),
+    headers: {
+      "Content-Type": "application/json"
+    },
 })
+})
+
+
+
+// API.getJournalEntries()
+// .then(entries => {
+//     DOM.renderJournalEntries(entries)
+// })
