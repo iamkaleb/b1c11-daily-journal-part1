@@ -2,7 +2,7 @@
 const COMP = {
   makeEntryComponent (entries) {
     return `
-    <h2>${entries.conceptsCovered}</h2>
+    <h2>${entries.concepts}</h2>
     <h3>${entries.date}</h3>
     <p>${entries.entry}</p>
     `
