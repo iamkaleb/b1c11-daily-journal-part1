@@ -5,6 +5,7 @@ const COMP = {
     <h2>${entries.concepts}</h2>
     <h3>${entries.date}</h3>
     <p>${entries.entry}</p>
+    <button id="delete--${entries.id}">Delete</button>
     `
   }
 }
