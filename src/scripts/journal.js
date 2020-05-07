@@ -48,3 +48,16 @@ radioButton.forEach(button => button.addEventListener("click", event => {
         return DOM.renderJournalEntries(entries)
     })
     }));
+
+document.addEventListener("click", event => {
+    if (event.target.id.startsWith("delete--")) {
+        const entryId = event.target.id.split("--")[1]
+        API.deleteJournalEntry(entryId)
+        .then( entries => {
+            return API.getJournalEntries(entries)
+        })
+        .then( entries => {
+            return DOM.renderJournalEntries(entries)
+        })
+    }
+})
