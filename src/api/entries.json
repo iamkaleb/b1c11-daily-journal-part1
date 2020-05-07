@@ -20,6 +20,13 @@
       "concepts": "Functions and Debugger",
       "entry": "Lectures on both basic JavaScript functions and how to use the debugger in dev tools. Got a lot of practice creating functions. Since there were separate exercises building off one initial directory, I also practiced copying directories and creating new git repositories.",
       "mood": "Productive"
+    },
+    {
+      "date": "2020-05-07",
+      "concepts": "Deleting from API",
+      "entry": "Today Brian went over how to use an event listener to trigger data deletion from an API.",
+      "mood": "focused",
+      "id": 4
     }
   ]
 }
