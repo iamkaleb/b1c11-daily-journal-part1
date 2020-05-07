@@ -8,6 +8,11 @@ const createJournalEntry = (date, concepts, entry, mood) => ({
     mood: mood
     })
 
+API.getJournalEntries()
+.then(entries => {
+    DOM.renderJournalEntries(entries)
+})
+
 document.getElementById("record-entry").addEventListener("click", event => {
     event.preventDefault();
     let date = document.getElementById("journalDate").value;
@@ -24,16 +29,22 @@ document.getElementById("record-entry").addEventListener("click", event => {
         return API.getJournalEntries(entries)
     })
     .then( entries => {
-        DOM.renderJournalEntries(entries)
+        return DOM.renderJournalEntries(entries)
     })
         } else {
             window.alert("Please complete your journal!")
         }
     })
 
+const radioButton = document.getElementsByName("mood")
 
-
-API.getJournalEntries()
-.then(entries => {
-    DOM.renderJournalEntries(entries)
-})
+radioButton.forEach(button => button.addEventListener("click", event => {
+    const mood = event.target.value;
+    API.getJournalEntries()
+    .then(entries => {
+        return entries.filter(entries => entries.mood === mood)
+    })
+    .then(entries => {
+        return DOM.renderJournalEntries(entries)
+    })
+    }));

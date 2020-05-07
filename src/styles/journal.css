@@ -2,3 +2,8 @@ fieldset {
     display: flex;
     flex-direction: column;
 }
+
+#mood-filter {
+    display: flex;
+    flex-direction: row;
+}
