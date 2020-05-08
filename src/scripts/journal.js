@@ -38,6 +38,8 @@ document.getElementById("record-entry").addEventListener("click", event => {
     .then( entries => {
         return DOM.renderJournalEntries(entries)
     })
+    DOM.renderForm();
+    DOM.renderFilter();
         } else {
             window.alert("Please complete your journal!")
         }
