@@ -20,7 +20,10 @@ document.getElementById("record-entry").addEventListener("click", event => {
     let entry = document.getElementById("journal_entry").value;
     let mood = document.getElementById("mood").value;
     let newJournalEntry = createJournalEntry(date, concepts, entry, mood)
-    if (date !== "" &&
+    let curseFilter = /fuck|shit/i
+    if (curseFilter.test(entry) || curseFilter.test(concepts)) {
+        window.alert("No cursing!")
+    } else if (date !== "" &&
         concepts !== "" &&
         entry !== "" &&
         mood !== "") {
