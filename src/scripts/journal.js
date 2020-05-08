@@ -1,5 +1,5 @@
 import API from "./data.js"
-import DOM from "./entriesDOM.js"
+import DOM from "./DOM.js"
 
 const createJournalEntry = (date, concepts, entry, mood) => ({
     date: date,
@@ -8,10 +8,14 @@ const createJournalEntry = (date, concepts, entry, mood) => ({
     mood: mood
     })
 
+DOM.renderForm();
+
+DOM.renderFilter();
+
 API.getJournalEntries()
 .then(entries => {
     DOM.renderJournalEntries(entries)
-})
+});
 
 document.getElementById("record-entry").addEventListener("click", event => {
     event.preventDefault();
