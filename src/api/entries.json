@@ -27,7 +27,13 @@
       "entry": "Today Brian went over how to use an event listener to trigger data deletion from an API.",
       "mood": "Productive",
       "id": 4
+    },
+    {
+      "date": "2020-05-08",
+      "concepts": "Dynamically displaying journal form",
+      "entry": "Today was a lab day. I've completed all the practices. so I've started working on challenges. The first challenge I did today involved modularizing my journal form components and loading them dynamically with JavaScript. They were previously hard-coded in HTML.",
+      "mood": "productive",
+      "id": 5
     }
- 
   ]
 }

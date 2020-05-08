@@ -8,51 +8,18 @@
 </head>
 <body>
     <h1>Daily Journal</h1>
-    <form action="">
-        <fieldset>
-            <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate">
-        </fieldset>
-        <fieldset>
-            <label for="concepts">Concepts covered</label>
-            <input type="text" maxlength="40" name="concepts" id="concepts">
-        </fieldset>
-        <fieldset>
-            <label for="journal_entry">Journal Entry</label>
-            <textarea name="journal_entry" id="journal_entry" cols="30" rows="10"></textarea>
-        </fieldset>
-        <fieldset>
-            <label for="mood">Mood for the day</label>
-            <select id="mood">
-                <option value="appreciative">Appreciative</option>
-                <option value="tired">Tired</option>
-                <option value="productive">Productive</option>
-            </select>
-        </fieldset>
-        <button id="record-entry">Record Journal Entry</button>
-    </form>
-    <hr>
-    <fieldset>
-        <legend>Filter Journal Entries by Mood</legend>
-        <div id="mood-filter">
+    <article>
+        <section id="form-section">
 
-        <label for="appreciative">
-            <input id="mood-button" type="radio" name="mood" value="Appreciative">Appreciative
-        </label>
+        </section>
+        <section id="filter-section">
 
-        <label for="tired">
-            <input id="mood-button" type="radio" name="mood" value="Tired">Tired
-        </label>
+        </section>
+    </article>
+    <article>
+        <section id ="entry-section">
 
-        <label for="productive">
-            <input id="mood-button" type="radio" name="mood" value="Productive">Productive
-        </label>
-
-        </div>
-    </fieldset>
-
-    <article id="entryLog">
-
+        </section>
     </article>
     <script type="module" src="scripts/journal.js"></script>
 </body>
