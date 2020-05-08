@@ -7,16 +7,18 @@ const filterContainer = document.querySelector("#filter-section")
 // FUNCTION RENDERING EACH JOURNAL ENTRY TO THE DOM
 const DOM = {
     renderJournalEntries (entries) {
-        entryContainer.innerHTML = ""
+        entryContainer.innerHTML = "";
         entries.forEach(entry => {
-            entryContainer.innerHTML += COMP.makeEntryComponent(entry)
+            entryContainer.innerHTML += COMP.makeEntryComponent(entry);;
         })
     },
     renderForm () {
-        formContainer.innerHTML = COMP.makeFormComponent()
+        formContainer.innerHTML = "";
+        formContainer.innerHTML = COMP.makeFormComponent();
     },
     renderFilter () {
-        filterContainer.innerHTML = COMP.makeFilterComponent()
+        filterContainer.innerHTML = "";
+        filterContainer.innerHTML = COMP.makeFilterComponent();
     }
 }
 

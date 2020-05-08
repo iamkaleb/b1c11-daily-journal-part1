@@ -34,6 +34,13 @@
       "entry": "Today was a lab day. I've completed all the practices. so I've started working on challenges. The first challenge I did today involved modularizing my journal form components and loading them dynamically with JavaScript. They were previously hard-coded in HTML.",
       "mood": "productive",
       "id": 5
+    },
+    {
+      "date": "2020-05-08",
+      "concepts": "Refresh form field after recording",
+      "entry": "I noticed the form field for my journal does not reset after recording an entry. This makes it cumbersome to record another entry afterwards since you'd need to delete everything you'd already typed.",
+      "mood": "productive",
+      "id": 6
     }
   ]
 }
