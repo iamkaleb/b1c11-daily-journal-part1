@@ -33,9 +33,6 @@ document.getElementById("record-entry").addEventListener("click", event => {
         mood !== "") {
     API.addJournalEntries(newJournalEntry)
     .then( entries => {
-        return API.getJournalEntries(entries)
-    })
-    .then( entries => {
         return DOM.renderJournalEntries(entries)
     })
     DOM.renderForm();

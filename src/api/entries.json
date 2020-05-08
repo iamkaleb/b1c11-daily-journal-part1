@@ -41,6 +41,13 @@
       "entry": "I noticed the form field for my journal does not reset after recording an entry. This makes it cumbersome to record another entry afterwards since you'd need to delete everything you'd already typed.",
       "mood": "productive",
       "id": 6
+    },
+    {
+      "date": "2020-05-08",
+      "concepts": "Creating method abstractions",
+      "entry": "I melded my POST and GET after using the \"Record Entry\" event listener. Let's see if it works.",
+      "mood": "productive",
+      "id": 7
     }
   ]
 }
