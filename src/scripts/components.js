@@ -2,15 +2,19 @@
 const COMP = {
   makeEntryComponent (entries) {
     return `
-    <h2>${entries.concepts}</h2>
-    <h3>${entries.date}</h3>
-    <p>${entries.entry}</p>
-    <button id="delete--${entries.id}">Delete</button>
+    <section class="entry--${entries.id}">
+      <h2>${entries.concepts}</h2>
+      <h3>${entries.date}</h3>
+      <p>${entries.entry}</p>
+      <button id="edit--${entries.id}">Edit</button>
+      <button id="delete--${entries.id}">Delete</button>
+    </section>
     `
   },
   makeFormComponent () {
     return `
     <form action="">
+    <input type="hidden" id="journalId" value="" />
       <fieldset>
           <label for="journalDate">Date of entry</label>
           <input type="date" name="journalDate" id="journalDate">
@@ -31,7 +35,7 @@ const COMP = {
               <option value="productive">Productive</option>
           </select>
       </fieldset>
-      <button id="record-entry">Record Journal Entry</button>
+      <button id="record-entry">Save</button>
     </form>
     `
 },
