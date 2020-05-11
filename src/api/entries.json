@@ -8,11 +8,11 @@
       "mood": "Appreciative"
     },
     {
-      "id": 2,
       "date": "2020-04-17",
       "concepts": "Objects and Manipulting DOM",
       "entry": "Lectures on the basics of JavaScript objects as well as how JavaScript can be used to modify the DOM.",
-      "mood": "Tired"
+      "mood": "",
+      "id": 2
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "date": "2020-05-07",
       "concepts": "Deleting from API",
       "entry": "Today Brian went over how to use an event listener to trigger data deletion from an API.",
-      "mood": "Productive",
+      "mood": "",
       "id": 4
     },
     {

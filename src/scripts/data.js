@@ -20,6 +20,29 @@ const API = {
         return fetch(`http://localhost:8088/entries/${entryId}`, {
             method: "DELETE"
         })
+    },
+    editJournalEntry (entryId) {
+        const updatedObject = {
+            date: document.getElementById("journalDate").value,
+            concepts: document.getElementById("concepts").value,
+            entry: document.getElementById("journal_entry").value,
+            mood: document.getElementById("mood").value
+        }
+        return fetch(`http://localhost:8088/entries/${entryId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedObject)
+        })
+        .then(entry => entry.json())
+        .then(() => {
+            document.getElementById("journalId").value = "";
+            document.getElementById("journalDate").value = "";
+            document.getElementById("concepts").value = "";
+            document.getElementById("journal_entry").value = "";
+            document.getElementById("mood").value = "";
+        })
     }
 }
 
