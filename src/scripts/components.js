@@ -6,6 +6,7 @@ const COMP = {
       <h2>${entries.concepts}</h2>
       <h3>${entries.date}</h3>
       <p>${entries.entry}</p>
+      <p>Mood: ${entries.mood.label}</p>
       <button id="edit--${entries.id}">Edit</button>
       <button id="delete--${entries.id}">Delete</button>
     </section>
@@ -30,9 +31,9 @@ const COMP = {
       <fieldset>
           <label for="mood">Mood for the day</label>
           <select id="mood">
-              <option value="appreciative">Appreciative</option>
-              <option value="tired">Tired</option>
-              <option value="productive">Productive</option>
+              <option value="1">Appreciative</option>
+              <option value="2">Tired</option>
+              <option value="3">Productive</option>
           </select>
       </fieldset>
       <button id="record-entry">Save</button>

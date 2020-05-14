@@ -5,13 +5,13 @@
       "date": "2020-04-16",
       "concepts": "Group project presentations and Intro to JavaScript",
       "entry": "Presented our webpages from our first group projects. I had a great time working with my team to put together a cohesive website. We did a lot of pair programming. Everyone took turns solving problems for the groupa nd contrinuting to the overall design. We were then introduced to some basics of JavaScript, including the power it has to manipulate the DOM and modify what the viewer sees when the interact with a website.",
-      "mood": "Appreciative"
+      "moodId": 1
     },
     {
       "date": "2020-04-17",
       "concepts": "Objects and Manipulting DOM",
-      "entry": "Lectures on the basics of JavaScript objects as well as how JavaScript can be used to modify the DOM.",
-      "mood": "",
+      "entry": "Lectures on the basics of JavaScript objects as well as how JavaScript can be used to modify the DOM. ",
+      "moodId": "2",
       "id": 2
     },
     {
@@ -19,35 +19,49 @@
       "date": "2020-04-20",
       "concepts": "Functions and Debugger",
       "entry": "Lectures on both basic JavaScript functions and how to use the debugger in dev tools. Got a lot of practice creating functions. Since there were separate exercises building off one initial directory, I also practiced copying directories and creating new git repositories.",
-      "mood": "Productive"
+      "moodId": 3
     },
     {
       "date": "2020-05-07",
       "concepts": "Deleting from API",
       "entry": "Today Brian went over how to use an event listener to trigger data deletion from an API.",
-      "mood": "",
+      "moodId": 1,
       "id": 4
     },
     {
       "date": "2020-05-08",
       "concepts": "Dynamically displaying journal form",
       "entry": "Today was a lab day. I've completed all the practices. so I've started working on challenges. The first challenge I did today involved modularizing my journal form components and loading them dynamically with JavaScript. They were previously hard-coded in HTML.",
-      "mood": "productive",
+      "moodId": 3,
       "id": 5
     },
     {
       "date": "2020-05-08",
       "concepts": "Refresh form field after recording",
       "entry": "I noticed the form field for my journal does not reset after recording an entry. This makes it cumbersome to record another entry afterwards since you'd need to delete everything you'd already typed.",
-      "mood": "productive",
+      "moodId": 3,
       "id": 6
     },
     {
       "date": "2020-05-08",
       "concepts": "Creating method abstractions",
       "entry": "I melded my POST and GET after using the \"Record Entry\" event listener. Let's see if it works.",
-      "mood": "productive",
+      "moodId": 3,
       "id": 7
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Appreciative"
+    },
+    {
+      "id": 2,
+      "label": "Tired"
+    },
+    {
+      "id": 3,
+      "label": "Productive"
     }
   ]
 }
