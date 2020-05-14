@@ -3,6 +3,22 @@ fieldset {
     flex-direction: column;
 }
 
+.bottom-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#filter-section {
+    display: flex;
+    flex-basis: 40%; 
+}
+
+#search-section {
+    display: flex;
+    flex-basis: 40%; 
+}
+
 #mood-filter {
     display: flex;
     flex-direction: row;
