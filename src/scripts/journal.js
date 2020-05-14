@@ -5,7 +5,7 @@ const createJournalEntry = (date, concepts, entry, mood) => ({
     date: date,
     concepts: concepts,
     entry: entry,
-    mood: mood
+    moodId: mood
     })
 
 DOM.renderForm();
@@ -25,10 +25,10 @@ document.getElementById("record-entry").addEventListener("click", event => {
     let entry = document.getElementById("journal_entry").value;
     let mood = document.getElementById("mood").value;
     let newJournalEntry = createJournalEntry(date, concepts, entry, mood)
-    let curseFilter = /fuck|shit/i
+    let curseFilter = /fuck|shit|bitch/i
     if (curseFilter.test(entry) || curseFilter.test(concepts)) {
         window.alert("No cursing!")
-    } else if (hiddenEntryId.value != "") {
+    } else if (hiddenEntryId != "") {
         API.editJournalEntry(hiddenEntryId)
         .then( entries => {
             return API.getJournalEntries(entries);
@@ -36,7 +36,7 @@ document.getElementById("record-entry").addEventListener("click", event => {
         .then( entries => {
             return DOM.renderJournalEntries(entries);
         })
-    } else if (hiddenEntryId.value == "") {
+    } else if (hiddenEntryId == "") {
         API.addJournalEntries(newJournalEntry)
         .then( entries => {
             return DOM.renderJournalEntries(entries)
@@ -54,7 +54,7 @@ radioButton.forEach(button => button.addEventListener("click", event => {
     const mood = event.target.value;
     API.getJournalEntries()
     .then(entries => {
-        return entries.filter(entries => entries.mood === mood)
+        return entries.filter(entries => entries.mood.label === mood)
     })
     .then(entries => {
         return DOM.renderJournalEntries(entries)

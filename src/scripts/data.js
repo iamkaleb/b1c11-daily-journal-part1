@@ -2,7 +2,7 @@
 // FUNCTION: GETS JOURNAL ENTRIES FROM LOCAL JSON
 const API = {
     getJournalEntries () {
-        return fetch("http://localhost:8088/entries")
+        return fetch("http://localhost:8088/entries?_expand=mood")
         .then(response => response.json())
         },
     addJournalEntries (newJournalEntry) {
@@ -17,7 +17,7 @@ const API = {
             return this.getJournalEntries(entries)
         })},
     deleteJournalEntry (entryId) {
-        return fetch(`http://localhost:8088/entries/${entryId}`, {
+        return fetch(`http://localhost:8088/entries/${entryId}?_expand=mood`, {
             method: "DELETE"
         })
     },
@@ -26,9 +26,9 @@ const API = {
             date: document.getElementById("journalDate").value,
             concepts: document.getElementById("concepts").value,
             entry: document.getElementById("journal_entry").value,
-            mood: document.getElementById("mood").value
+            moodId: document.getElementById("mood").value
         }
-        return fetch(`http://localhost:8088/entries/${entryId}`, {
+        return fetch(`http://localhost:8088/entries/${entryId}?_expand=mood`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
