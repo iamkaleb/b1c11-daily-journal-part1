@@ -4,6 +4,7 @@ import COMP from "./components.js"
 const entryContainer = document.querySelector("#entry-section")
 const formContainer = document.querySelector("#form-section")
 const filterContainer = document.querySelector("#filter-section")
+const searchContainer = document.querySelector("#search-section")
 // FUNCTION RENDERING EACH JOURNAL ENTRY TO THE DOM
 const DOM = {
     renderJournalEntries (entries) {
@@ -19,6 +20,10 @@ const DOM = {
     renderFilter () {
         filterContainer.innerHTML = "";
         filterContainer.innerHTML = COMP.makeFilterComponent();
+    },
+    renderSearchField () {
+        searchContainer.innerHTML = "";
+        searchContainer.innerHTML = COMP.makeSearchComponent();
     }
 }
 

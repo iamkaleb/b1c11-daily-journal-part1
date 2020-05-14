@@ -12,6 +12,8 @@ DOM.renderForm();
 
 DOM.renderFilter();
 
+DOM.renderSearchField();
+
 API.getJournalEntries()
 .then(entries => {
     DOM.renderJournalEntries(entries)
@@ -95,3 +97,22 @@ document.addEventListener("click", event => {
         updateFormFields(entryId);
         }
     })
+
+
+document.addEventListener("keypress", event => {
+    if (event.keyCode === 13) {
+        let filteredStuff = [];
+        let searchTerm = document.getElementById("searchTerm").value;
+        API.getJournalEntries ()
+            .then(entries => {
+                console.log(entries)
+                entries.forEach(entry => {
+                    for (const text of Object.values(entry)) {
+                        if (text.toString().includes(searchTerm)) {
+                            filteredStuff.push(entry);
+                        }
+                    DOM.renderJournalEntries(filteredStuff)   
+                    }
+                })
+                })     
+}})

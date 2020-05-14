@@ -42,7 +42,6 @@ const COMP = {
 },
 makeFilterComponent () {
   return `
-  <hr>
   <fieldset>
     <legend>Filter Journal Entries by Mood</legend>
     <div id="mood-filter">
@@ -60,6 +59,16 @@ makeFilterComponent () {
     </label>
 
     </div>
+  </fieldset>
+  `
+},
+makeSearchComponent () {
+  return `
+  <fieldset>
+    <legend>Search journal entries</legend>
+
+    <input type="text" name="searchField" id="searchTerm" placeholder="Enter search term">
+
   </fieldset>
   `
 }
